@@ -66,3 +66,10 @@ const showPerson = (person) => {
 }
 
 //show next person
+nextBtn.addEventListener('click', () => {
+  currentItem++ 
+  if (currentItem > reviews.length - 1) { //when the nextBtn exceeds list of items reset to 1st item
+    currentItem = 0
+  }
+  showPerson(currentItem)
+})
