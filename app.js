@@ -73,3 +73,12 @@ nextBtn.addEventListener('click', () => {
   }
   showPerson(currentItem)
 })
+
+//show previous person
+prevBtn.addEventListener('click', () => {
+  currentItem--
+  if (currentItem < 0) { //when the prevBtn below 0 list of items reset to lastitem
+    currentItem = reviews.length - 1
+  }
+  showPerson(currentItem)
+})
